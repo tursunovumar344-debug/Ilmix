@@ -5,713 +5,1362 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="theme-color" content="#2563eb">
 <title>Tez Hisobla</title>
+
 <style>
 *{
-  box-sizing:border-box;
-  -webkit-tap-highlight-color:transparent;
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
 }
+
 body{
-  margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  background:#f4f7fb;
-  color:#172033;
-  min-height:100vh;
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    background:#f4f7fb;
+    color:#172033;
+    min-height:100vh;
 }
+
 .app{
-  width:100%;
-  max-width:480px;
-  min-height:100vh;
-  margin:auto;
-  background:#fff;
-  position:relative;
-  overflow:hidden;
+    width:100%;
+    max-width:480px;
+    min-height:100vh;
+    margin:auto;
+    background:#fff;
+    position:relative;
+    overflow:hidden;
 }
+
 .screen{
-  min-height:100vh;
-  padding:28px 20px;
+    min-height:100vh;
+    padding:28px 20px;
 }
+
 .hidden{
-  display:none!important;
+    display:none!important;
 }
+
 /* HOME */
+
 .home{
-  display:flex;
-  flex-direction:column;
-  min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
 }
+
 .logo{
-  width:76px;
-  height:76px;
-  border-radius:24px;
-  background:#2563eb;
-  color:white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:38px;
-  margin:35px auto 18px;
-  box-shadow:0 12px 30px rgba(37,99,235,.25);
+    width:76px;
+    height:76px;
+    border-radius:24px;
+    background:#2563eb;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:38px;
+    margin:35px auto 18px;
+    box-shadow:0 12px 30px rgba(37,99,235,.25);
 }
+
 h1{
-  text-align:center;
-  font-size:31px;
-  margin:0;
-  font-weight:800;
+    text-align:center;
+    font-size:31px;
+    margin:0;
+    font-weight:800;
 }
+
 .subtitle{
-  text-align:center;
-  color:#7a8496;
-  margin:8px 0 35px;
-  font-size:15px;
+    text-align:center;
+    color:#7a8496;
+    margin:8px 0 35px;
+    font-size:15px;
 }
+
 .levels{
-  display:flex;
-  flex-direction:column;
-  gap:14px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
 }
+
 .level{
-  border:0;
-  width:100%;
-  min-height:88px;
-  border-radius:22px;
-  padding:16px 18px;
-  display:flex;
-  align-items:center;
-  text-align:left;
-  background:#f7f9fc;
-  cursor:pointer;
-  transition:.15s;
+    border:0;
+    width:100%;
+    min-height:88px;
+    border-radius:22px;
+    padding:16px 18px;
+    display:flex;
+    align-items:center;
+    text-align:left;
+    background:#f7f9fc;
+    cursor:pointer;
+    transition:.15s;
 }
+
 .level:active{
-  transform:scale(.97);
+    transform:scale(.97);
 }
+
 .level-icon{
-  width:55px;
-  height:55px;
-  border-radius:17px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:27px;
-  margin-right:15px;
+    width:55px;
+    height:55px;
+    border-radius:17px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:27px;
+    margin-right:15px;
 }
+
 .easy .level-icon{
-  background:#dcfce7;
+    background:#dcfce7;
 }
+
 .normal .level-icon{
-  background:#fef3c7;
+    background:#fef3c7;
 }
+
 .hard .level-icon{
-  background:#fee2e2;
+    background:#fee2e2;
 }
+
 .level-title{
-  font-size:19px;
-  font-weight:750;
+    font-size:19px;
+    font-weight:750;
 }
+
 .level-info{
-  font-size:13px;
-  color:#7d8798;
-  margin-top:4px;
+    font-size:13px;
+    color:#7d8798;
+    margin-top:4px;
 }
+
 .record{
-  margin-top:auto;
-  background:#f7f9fc;
-  border-radius:20px;
-  padding:17px;
-  text-align:center;
+    margin-top:auto;
+    background:#f7f9fc;
+    border-radius:20px;
+    padding:17px;
+    text-align:center;
 }
+
 .record-label{
-  color:#7c8799;
-  font-size:13px;
+    color:#7c8799;
+    font-size:13px;
 }
+
 .record-value{
-  font-size:28px;
-  font-weight:800;
-  color:#2563eb;
-  margin-top:3px;
+    font-size:28px;
+    font-weight:800;
+    color:#2563eb;
+    margin-top:3px;
 }
+
 /* GAME */
+
 .game-top{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
 }
+
 .back{
-  border:0;
-  background:#f1f5f9;
-  width:43px;
-  height:43px;
-  border-radius:14px;
-  font-size:20px;
+    border:0;
+    background:#f1f5f9;
+    width:43px;
+    height:43px;
+    border-radius:14px;
+    font-size:20px;
 }
+
 .stats{
-  display:flex;
-  gap:8px;
+    display:flex;
+    gap:7px;
 }
+
 .stat{
-  background:#f1f5f9;
-  border-radius:13px;
-  padding:8px 12px;
-  text-align:center;
-  min-width:64px;
+    background:#f1f5f9;
+    border-radius:13px;
+    padding:8px 11px;
+    text-align:center;
+    min-width:62px;
 }
+
 .stat small{
-  display:block;
-  color:#8a94a5;
-  font-size:10px;
+    display:block;
+    color:#8a94a5;
+    font-size:10px;
 }
+
 .stat b{
-  font-size:16px;
+    font-size:16px;
 }
+
+/* TIMER */
+
 .timer-wrap{
-  text-align:center;
-  margin-top:12px;
+    text-align:center;
+    margin-top:12px;
 }
+
 .timer{
-  width:105px;
-  height:105px;
-  border-radius:50%;
-  border:8px solid #2563eb;
-  margin:auto;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:37px;
-  font-weight:850;
-  color:#2563eb;
-  transition:.2s;
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    border:8px solid #2563eb;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:37px;
+    font-weight:850;
+    color:#2563eb;
+    transition:.2s;
 }
+
 .timer.warning{
-  border-color:#f59e0b;
-  color:#f59e0b;
+    border-color:#f59e0b;
+    color:#f59e0b;
 }
+
 .timer.danger{
-  border-color:#ef4444;
-  color:#ef4444;
+    border-color:#ef4444;
+    color:#ef4444;
+    animation:pulse .5s infinite alternate;
 }
+
+@keyframes pulse{
+    from{
+        transform:scale(1);
+    }
+    to{
+        transform:scale(1.05);
+    }
+}
+
 .level-name{
-  text-align:center;
-  margin-top:12px;
-  color:#8791a2;
-  font-size:13px;
+    text-align:center;
+    margin-top:12px;
+    color:#8791a2;
+    font-size:13px;
 }
+
+/* QUESTION */
+
 .problem-box{
-  margin-top:45px;
-  text-align:center;
+    margin-top:42px;
+    text-align:center;
 }
+
 .problem{
-  font-size:50px;
-  font-weight:850;
-  letter-spacing:1px;
+    font-size:50px;
+    font-weight:850;
+    letter-spacing:1px;
 }
+
 .equals{
-  color:#a0a8b6;
-  margin:4px 0 15px;
-  font-size:25px;
+    color:#a0a8b6;
+    margin:4px 0 15px;
+    font-size:25px;
 }
+
 .answer{
-  width:100%;
-  height:72px;
-  border:2px solid #e1e6ee;
-  border-radius:20px;
-  font-size:32px;
-  font-weight:700;
-  text-align:center;
-  outline:none;
-  background:#fff;
-  color:#172033;
+    width:100%;
+    height:72px;
+    border:2px solid #e1e6ee;
+    border-radius:20px;
+    font-size:32px;
+    font-weight:700;
+    text-align:center;
+    outline:none;
+    background:#fff;
+    color:#172033;
 }
+
 .answer:focus{
-  border-color:#2563eb;
+    border-color:#2563eb;
 }
+
 .check{
-  width:100%;
-  height:62px;
-  margin-top:14px;
-  border:0;
-  border-radius:19px;
-  background:#2563eb;
-  color:#fff;
-  font-size:18px;
-  font-weight:750;
+    width:100%;
+    height:62px;
+    margin-top:14px;
+    border:0;
+    border-radius:19px;
+    background:#2563eb;
+    color:#fff;
+    font-size:18px;
+    font-weight:750;
 }
+
 .check:active{
-  transform:scale(.98);
+    transform:scale(.98);
 }
+
 .combo{
-  text-align:center;
-  margin-top:22px;
-  min-height:25px;
-  font-weight:750;
-  color:#2563eb;
+    text-align:center;
+    margin-top:22px;
+    min-height:25px;
+    font-weight:750;
+    color:#2563eb;
 }
+
 .feedback{
-  text-align:center;
-  min-height:27px;
-  margin-top:5px;
-  font-weight:700;
+    text-align:center;
+    min-height:27px;
+    margin-top:5px;
+    font-weight:700;
 }
+
 .correct{
-  color:#16a34a;
+    color:#16a34a;
 }
+
 .wrong{
-  color:#ef4444;
+    color:#ef4444;
 }
+
 /* RESULT */
+
 .result{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  min-height:100vh;
-  padding-top:65px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    min-height:100vh;
+    padding-top:65px;
 }
+
 .result-icon{
-  width:100px;
-  height:100px;
-  border-radius:32px;
-  background:#dbeafe;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:48px;
+    width:100px;
+    height:100px;
+    border-radius:32px;
+    background:#dbeafe;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:48px;
 }
+
 .result h2{
-  font-size:29px;
-  margin:22px 0 4px;
+    font-size:29px;
+    margin:22px 0 4px;
 }
+
 .result-sub{
-  color:#8490a2;
-  margin-bottom:28px;
+    color:#8490a2;
+    margin-bottom:28px;
 }
+
 .final-score{
-  font-size:64px;
-  font-weight:900;
-  color:#2563eb;
+    font-size:64px;
+    font-weight:900;
+    color:#2563eb;
 }
+
 .score-label{
-  color:#8a94a5;
-  margin-bottom:28px;
+    color:#8a94a5;
+    margin-bottom:28px;
 }
+
 .result-stats{
-  width:100%;
-  display:grid;
-  grid-template-columns:1fr 1fr 1fr;
-  gap:9px;
+    width:100%;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:9px;
 }
+
 .result-card{
-  background:#f6f8fb;
-  border-radius:18px;
-  padding:15px 5px;
-  text-align:center;
+    background:#f6f8fb;
+    border-radius:18px;
+    padding:15px 5px;
+    text-align:center;
 }
+
 .result-card b{
-  font-size:22px;
-  display:block;
+    font-size:22px;
+    display:block;
 }
+
 .result-card span{
-  color:#8993a3;
-  font-size:11px;
+    color:#8993a3;
+    font-size:11px;
 }
+
 .actions{
-  width:100%;
-  margin-top:30px;
+    width:100%;
+    margin-top:30px;
 }
+
 .primary,
 .secondary{
-  width:100%;
-  height:60px;
-  border-radius:18px;
-  border:0;
-  font-size:17px;
-  font-weight:750;
+    width:100%;
+    height:60px;
+    border-radius:18px;
+    border:0;
+    font-size:17px;
+    font-weight:750;
 }
+
 .primary{
-  background:#2563eb;
-  color:white;
+    background:#2563eb;
+    color:white;
 }
+
 .secondary{
-  background:#eef2f7;
-  color:#344054;
-  margin-top:10px;
+    background:#eef2f7;
+    color:#344054;
+    margin-top:10px;
 }
-/* RESPONSIVE */
+
 @media(max-height:650px){
-  .logo{
-    margin-top:15px;
-  }
-  .problem-box{
-    margin-top:25px;
-  }
-  .screen{
-    padding-top:18px;
-  }
+
+    .logo{
+        margin-top:15px;
+    }
+
+    .problem-box{
+        margin-top:25px;
+    }
+
+    .screen{
+        padding-top:18px;
+    }
+
+    .timer{
+        width:90px;
+        height:90px;
+        font-size:32px;
+    }
 }
 </style>
 </head>
+
 <body>
+
 <div class="app">
-  <!-- HOME -->
-  <section id="home" class="screen home">
+
+<!-- HOME -->
+
+<section id="home" class="screen home">
+
     <div class="logo">＋</div>
+
     <h1>Tez Hisobla</h1>
+
     <div class="subtitle">
-      Tez fikrla. Tez hisobla. Rekordingni yangila.
+        Tez fikrla. Tez hisobla. Rekordingni yangila.
     </div>
+
     <div class="levels">
-      <button class="level easy" onclick="startGame('easy')">
-        <div class="level-icon">🟢</div>
-        <div>
-          <div class="level-title">Oson</div>
-          <div class="level-info">2 xonali sonlar • 7 soniya</div>
-        </div>
-      </button>
-      <button class="level normal" onclick="startGame('normal')">
-        <div class="level-icon">🟡</div>
-        <div>
-          <div class="level-title">Normal</div>
-          <div class="level-info">Murakkabroq 2 xonali • 5 soniya</div>
-        </div>
-      </button>
-      <button class="level hard" onclick="startGame('hard')">
-        <div class="level-icon">🔴</div>
-        <div>
-          <div class="level-title">Qiyin</div>
-          <div class="level-info">3 xonali sonlar • 3 soniya</div>
-        </div>
-      </button>
+
+        <button class="level easy" onclick="startGame('easy')">
+            <div class="level-icon">🟢</div>
+
+            <div>
+                <div class="level-title">Oson</div>
+                <div class="level-info">
+                    2 xonali sonlar • 10 soniya
+                </div>
+            </div>
+        </button>
+
+
+        <button class="level normal" onclick="startGame('normal')">
+            <div class="level-icon">🟡</div>
+
+            <div>
+                <div class="level-title">Normal</div>
+                <div class="level-info">
+                    Murakkabroq 2 xonali • 7 soniya
+                </div>
+            </div>
+        </button>
+
+
+        <button class="level hard" onclick="startGame('hard')">
+            <div class="level-icon">🔴</div>
+
+            <div>
+                <div class="level-title">Qiyin</div>
+                <div class="level-info">
+                    3 xonali sonlar • 5 soniya
+                </div>
+            </div>
+        </button>
+
     </div>
+
+
     <div class="record">
-      <div class="record-label">🏆 Eng yuqori natija</div>
-      <div id="homeRecord" class="record-value">0</div>
+
+        <div class="record-label">
+            🏆 Eng yuqori natija
+        </div>
+
+        <div id="homeRecord" class="record-value">
+            0
+        </div>
+
     </div>
-  </section>
-  <!-- GAME -->
-  <section id="game" class="screen hidden">
+
+</section>
+
+
+<!-- GAME -->
+
+<section id="game" class="screen hidden">
+
     <div class="game-top">
-      <button class="back" onclick="goHome()">‹</button>
-      <div class="stats">
-        <div class="stat">
-          <small>Ball</small>
-          <b id="score">0</b>
+
+        <button class="back" onclick="goHome()">
+            ‹
+        </button>
+
+        <div class="stats">
+
+            <div class="stat">
+                <small>Ball</small>
+                <b id="score">0</b>
+            </div>
+
+            <div class="stat">
+                <small>To‘g‘ri</small>
+                <b id="correct">0</b>
+            </div>
+
+            <div class="stat">
+                <small>Xato</small>
+                <b id="wrong">0</b>
+            </div>
+
         </div>
-        <div class="stat">
-          <small>To‘g‘ri</small>
-          <b id="correct">0</b>
-        </div>
-        <div class="stat">
-          <small>Xato</small>
-          <b id="wrong">0</b>
-        </div>
-      </div>
+
     </div>
+
+
     <div class="timer-wrap">
-      <div id="timer" class="timer">7</div>
-      <div id="levelName" class="level-name">Oson</div>
+
+        <div id="timer" class="timer">
+            10
+        </div>
+
+        <div id="levelName" class="level-name">
+            Oson • 10 soniya
+        </div>
+
     </div>
+
+
     <div class="problem-box">
-      <div id="problem" class="problem">23 + 25</div>
-      <div class="equals">=</div>
-      <input
-        id="answer"
-        class="answer"
-        type="number"
-        inputmode="numeric"
-        autocomplete="off"
-        placeholder="Javob"
-      >
-      <button class="check" onclick="checkAnswer()">
-        ✓ Javobni tekshirish
-      </button>
-      <div id="combo" class="combo"></div>
-      <div id="feedback" class="feedback"></div>
+
+        <div id="problem" class="problem">
+            23 + 25
+        </div>
+
+        <div class="equals">
+            =
+        </div>
+
+        <input
+            id="answer"
+            class="answer"
+            type="number"
+            inputmode="numeric"
+            autocomplete="off"
+            placeholder="Javob"
+        >
+
+        <button class="check" onclick="checkAnswer()">
+            ✓ Javobni tekshirish
+        </button>
+
+        <div id="combo" class="combo"></div>
+
+        <div id="feedback" class="feedback"></div>
+
     </div>
-  </section>
-  <!-- RESULT -->
-  <section id="result" class="screen result hidden">
-    <div class="result-icon">🏆</div>
-    <h2>Natija tayyor!</h2>
-    <div class="result-sub" id="resultLevel">
-      Oson daraja
+
+</section>
+
+
+<!-- RESULT -->
+
+<section id="result" class="screen result hidden">
+
+    <div class="result-icon">
+        🏆
     </div>
-    <div id="finalScore" class="final-score">0</div>
-    <div class="score-label">ball</div>
+
+    <h2>
+        Natija tayyor!
+    </h2>
+
+    <div id="resultLevel" class="result-sub">
+        Oson daraja
+    </div>
+
+    <div id="finalScore" class="final-score">
+        0
+    </div>
+
+    <div class="score-label">
+        ball
+    </div>
+
+
     <div class="result-stats">
-      <div class="result-card">
-        <b id="finalCorrect">0</b>
-        <span>To‘g‘ri</span>
-      </div>
-      <div class="result-card">
-        <b id="finalWrong">0</b>
-        <span>Xato</span>
-      </div>
-      <div class="result-card">
-        <b id="finalTotal">0</b>
-        <span>Misol</span>
-      </div>
+
+        <div class="result-card">
+            <b id="finalCorrect">0</b>
+            <span>To‘g‘ri</span>
+        </div>
+
+        <div class="result-card">
+            <b id="finalWrong">0</b>
+            <span>Xato</span>
+        </div>
+
+        <div class="result-card">
+            <b id="finalTotal">0</b>
+            <span>Misol</span>
+        </div>
+
     </div>
+
+
     <div class="actions">
-      <button class="primary" onclick="restartGame()">
-        🔄 Qayta o‘ynash
-      </button>
-      <button class="secondary" onclick="goHome()">
-        🏠 Bosh sahifa
-      </button>
+
+        <button class="primary" onclick="restartGame()">
+            🔄 Qayta o‘ynash
+        </button>
+
+        <button class="secondary" onclick="goHome()">
+            🏠 Bosh sahifa
+        </button>
+
     </div>
-  </section>
+
+</section>
+
 </div>
+
+
 <script>
+
+/* =========================
+   GAME VARIABLES
+========================= */
+
 let level = "";
-let timeLimit = 7;
-let timeLeft = 7;
+
+let timeLimit = 10;
+let timeLeft = 10;
+
 let num1 = 0;
 let num2 = 0;
+
 let operator = "+";
 let correctAnswer = 0;
+
 let score = 0;
 let correct = 0;
 let wrong = 0;
 let combo = 0;
+
+let questionNumber = 0;
+let totalQuestions = 20;
+
 let timerInterval = null;
 let locked = false;
+
+
+/* =========================
+   LEVEL SETTINGS
+========================= */
+
 const levels = {
-  easy: {
-    name: "Oson",
-    time: 7
-  },
-  normal: {
-    name: "Normal",
-    time: 5
-  },
-  hard: {
-    name: "Qiyin",
-    time: 3
-  }
+
+    easy:{
+        name:"Oson",
+        time:10
+    },
+
+    normal:{
+        name:"Normal",
+        time:7
+    },
+
+    hard:{
+        name:"Qiyin",
+        time:5
+    }
+
 };
-const home = document.getElementById("home");
-const game = document.getElementById("game");
-const result = document.getElementById("result");
-const timer = document.getElementById("timer");
-const problem = document.getElementById("problem");
-const answer = document.getElementById("answer");
-const scoreEl = document.getElementById("score");
-const correctEl = document.getElementById("correct");
-const wrongEl = document.getElementById("wrong");
-const comboEl = document.getElementById("combo");
-const feedback = document.getElementById("feedback");
-const levelName = document.getElementById("levelName");
-// RECORD
+
+
+/* =========================
+   ELEMENTS
+========================= */
+
+const home =
+    document.getElementById("home");
+
+const game =
+    document.getElementById("game");
+
+const result =
+    document.getElementById("result");
+
+const timer =
+    document.getElementById("timer");
+
+const problem =
+    document.getElementById("problem");
+
+const answer =
+    document.getElementById("answer");
+
+const scoreEl =
+    document.getElementById("score");
+
+const correctEl =
+    document.getElementById("correct");
+
+const wrongEl =
+    document.getElementById("wrong");
+
+const comboEl =
+    document.getElementById("combo");
+
+const feedback =
+    document.getElementById("feedback");
+
+const levelName =
+    document.getElementById("levelName");
+
+
+/* =========================
+   RECORD
+========================= */
+
 function getRecord(){
-  return Number(localStorage.getItem("tezHisoblaRecord") || 0);
-}
-function updateHomeRecord(){
-  document.getElementById("homeRecord").textContent = getRecord();
-}
-updateHomeRecord();
-// START
-function startGame(selectedLevel){
-  level = selectedLevel;
-  timeLimit = levels[level].time;
-  score = 0;
-  correct = 0;
-  wrong = 0;
-  combo = 0;
-  home.classList.add("hidden");
-  result.classList.add("hidden");
-  game.classList.remove("hidden");
-  levelName.textContent =
-    levels[level].name + " • " + timeLimit + " soniya";
-  updateStats();
-  newQuestion();
-}
-// NEW QUESTION
-function newQuestion(){
-  clearInterval(timerInterval);
-  locked = false;
-  answer.value = "";
-  answer.disabled = false;
-  feedback.textContent = "";
-  feedback.className = "feedback";
-  comboEl.textContent =
-    combo >= 3 ? "🔥 " + combo + " ta ketma-ket!" : "";
-  generateProblem();
-  timeLeft = timeLimit;
-  updateTimer();
-  timerInterval = setInterval(function(){
-    timeLeft -= 0.1;
-    if(timeLeft <= 0){
-      timeLeft = 0;
-      updateTimer();
-      clearInterval(timerInterval);
-      timeOut();
-      return;
-    }
-    updateTimer();
-  },100);
-  setTimeout(function(){
-    answer.focus();
-  },50);
-}
-// GENERATE
-function generateProblem(){
-  let a,b;
-  if(level === "easy"){
-    // Oson: oddiy 2 xonali sonlar
-    a = randomInt(10,50);
-    b = randomInt(10,50);
-    operator = Math.random() < 0.5 ? "+" : "-";
-    if(operator === "-" && b > a){
-      [a,b] = [b,a];
-    }
-  }
-  else if(level === "normal"){
-    // Normal: murakkabroq 2 xonali sonlar
-    a = randomInt(25,99);
-    b = randomInt(15,89);
-    operator = Math.random() < 0.5 ? "+" : "-";
-    if(operator === "-" && b > a){
-      [a,b] = [b,a];
-    }
-  }
-  else{
-    // Qiyin: 3 xonali sonlar
-    a = randomInt(100,999);
-    b = randomInt(100,999);
-    operator = Math.random() < 0.5 ? "+" : "-";
-    if(operator === "-" && b > a){
-      [a,b] = [b,a];
-    }
-  }
-  num1 = a;
-  num2 = b;
-  correctAnswer =
-    operator === "+"
-      ? num1 + num2
-      : num1 - num2;
-  problem.textContent =
-    num1 + " " + operator + " " + num2;
-}
-// TIMER
-function updateTimer(){
-  const display = Math.max(0, Math.ceil(timeLeft));
-  timer.textContent = display;
-  timer.classList.remove("warning","danger");
-  if(timeLeft <= 2){
-    timer.classList.add("danger");
-  }
-  else if(timeLeft <= 3){
-    timer.classList.add("warning");
-  }
-}
-// CHECK
-function checkAnswer(){
-  if(locked) return;
-  const value = answer.value.trim();
-  if(value === ""){
-    answer.focus();
-    return;
-  }
-  locked = true;
-  clearInterval(timerInterval);
-  const userAnswer = Number(value);
-  if(userAnswer === correctAnswer){
-    correct++;
-    combo++;
-    let points = 1;
-    if(combo >= 5){
-      points = 2;
-    }
-    score += points;
-    feedback.textContent =
-      points === 2
-        ? "🔥 To‘g‘ri! +2 ball"
-        : "✅ To‘g‘ri! +1 ball";
-    feedback.className = "feedback correct";
-  }else{
-    wrong++;
-    combo = 0;
-    feedback.textContent =
-      "❌ Xato. Javob: " + correctAnswer;
-    feedback.className = "feedback wrong";
-  }
-  updateStats();
-  answer.disabled = true;
-  setTimeout(function(){
-    if(!game.classList.contains("hidden")){
-      newQuestion();
-    }
-  },650);
-}
-// TIME OUT
-function timeOut(){
-  if(locked) return;
-  locked = true;
-  wrong++;
-  combo = 0;
-  feedback.textContent =
-    "⏰ Vaqt tugadi! Javob: " + correctAnswer;
-  feedback.className = "feedback wrong";
-  answer.disabled = true;
-  updateStats();
-  setTimeout(function(){
-    if(!game.classList.contains("hidden")){
-      newQuestion();
-    }
-  },800);
-}
-// STATS
-function updateStats(){
-  scoreEl.textContent = score;
-  correctEl.textContent = correct;
-  wrongEl.textContent = wrong;
-  comboEl.textContent =
-    combo >= 3 ? "🔥 " + combo + " ta ketma-ket!" : "";
-}
-// RESULT
-function finishGame(){
-  clearInterval(timerInterval);
-  game.classList.add("hidden");
-  result.classList.remove("hidden");
-  document.getElementById("finalScore").textContent = score;
-  document.getElementById("finalCorrect").textContent = correct;
-  document.getElementById("finalWrong").textContent = wrong;
-  document.getElementById("finalTotal").textContent =
-    correct + wrong;
-  document.getElementById("resultLevel").textContent =
-    levels[level].name + " daraja";
-  const oldRecord = getRecord();
-  if(score > oldRecord){
-    localStorage.setItem(
-      "tezHisoblaRecord",
-      score
+
+    return Number(
+        localStorage.getItem("tezHisoblaRecord") || 0
     );
-  }
-  updateHomeRecord();
+
 }
-// HOME
+
+
+function updateHomeRecord(){
+
+    document.getElementById("homeRecord").textContent =
+        getRecord();
+
+}
+
+
+updateHomeRecord();
+
+
+/* =========================
+   START GAME
+========================= */
+
+function startGame(selectedLevel){
+
+    level = selectedLevel;
+
+    timeLimit =
+        levels[level].time;
+
+    timeLeft =
+        timeLimit;
+
+    score = 0;
+    correct = 0;
+    wrong = 0;
+    combo = 0;
+    questionNumber = 0;
+
+    home.classList.add("hidden");
+
+    result.classList.add("hidden");
+
+    game.classList.remove("hidden");
+
+    levelName.textContent =
+        levels[level].name +
+        " • " +
+        timeLimit +
+        " soniya";
+
+    updateStats();
+
+    newQuestion();
+
+}
+
+
+/* =========================
+   NEW QUESTION
+========================= */
+
+function newQuestion(){
+
+    clearInterval(timerInterval);
+
+    locked = false;
+
+    answer.value = "";
+
+    answer.disabled = false;
+
+    feedback.textContent = "";
+
+    feedback.className =
+        "feedback";
+
+    questionNumber++;
+
+    if(questionNumber > totalQuestions){
+
+        finishGame();
+
+        return;
+
+    }
+
+    generateProblem();
+
+    timeLeft = timeLimit;
+
+    updateTimer();
+
+
+    timerInterval = setInterval(function(){
+
+        timeLeft -= 0.1;
+
+        if(timeLeft <= 0){
+
+            timeLeft = 0;
+
+            updateTimer();
+
+            clearInterval(timerInterval);
+
+            timeOut();
+
+            return;
+
+        }
+
+        updateTimer();
+
+    },100);
+
+
+    setTimeout(function(){
+
+        answer.focus();
+
+    },50);
+
+}
+
+
+/* =========================
+   GENERATE MATH
+========================= */
+
+function generateProblem(){
+
+    let a;
+    let b;
+
+
+    /* EASY */
+
+    if(level === "easy"){
+
+        a = randomInt(10,50);
+
+        b = randomInt(10,50);
+
+        operator =
+            Math.random() < 0.5
+            ? "+"
+            : "-";
+
+
+        if(
+            operator === "-" &&
+            b > a
+        ){
+
+            [a,b] = [b,a];
+
+        }
+
+    }
+
+
+    /* NORMAL */
+
+    else if(level === "normal"){
+
+        a = randomInt(25,99);
+
+        b = randomInt(15,89);
+
+        operator =
+            Math.random() < 0.5
+            ? "+"
+            : "-";
+
+
+        if(
+            operator === "-" &&
+            b > a
+        ){
+
+            [a,b] = [b,a];
+
+        }
+
+    }
+
+
+    /* HARD */
+
+    else{
+
+        a = randomInt(100,999);
+
+        b = randomInt(100,999);
+
+        operator =
+            Math.random() < 0.5
+            ? "+"
+            : "-";
+
+
+        if(
+            operator === "-" &&
+            b > a
+        ){
+
+            [a,b] = [b,a];
+
+        }
+
+    }
+
+
+    num1 = a;
+
+    num2 = b;
+
+
+    correctAnswer =
+        operator === "+"
+        ? num1 + num2
+        : num1 - num2;
+
+
+    problem.textContent =
+        num1 +
+        " " +
+        operator +
+        " " +
+        num2;
+
+}
+
+
+/* =========================
+   TIMER
+========================= */
+
+function updateTimer(){
+
+    const display =
+        Math.max(
+            0,
+            Math.ceil(timeLeft)
+        );
+
+    timer.textContent =
+        display;
+
+
+    timer.classList.remove(
+        "warning",
+        "danger"
+    );
+
+
+    if(timeLeft <= 2){
+
+        timer.classList.add(
+            "danger"
+        );
+
+    }
+
+    else if(
+        timeLeft <= 3
+    ){
+
+        timer.classList.add(
+            "warning"
+        );
+
+    }
+
+}
+
+
+/* =========================
+   CHECK ANSWER
+========================= */
+
+function checkAnswer(){
+
+    if(locked){
+
+        return;
+
+    }
+
+
+    const value =
+        answer.value.trim();
+
+
+    if(value === ""){
+
+        answer.focus();
+
+        return;
+
+    }
+
+
+    locked = true;
+
+    clearInterval(timerInterval);
+
+
+    const userAnswer =
+        Number(value);
+
+
+    if(
+        userAnswer ===
+        correctAnswer
+    ){
+
+        correct++;
+
+        combo++;
+
+
+        let points = 1;
+
+
+        if(combo >= 5){
+
+            points = 2;
+
+        }
+
+
+        score += points;
+
+
+        if(points === 2){
+
+            feedback.textContent =
+                "🔥 To‘g‘ri! +2 ball";
+
+        }
+
+        else{
+
+            feedback.textContent =
+                "✅ To‘g‘ri! +1 ball";
+
+        }
+
+
+        feedback.className =
+            "feedback correct";
+
+    }
+
+    else{
+
+        wrong++;
+
+        combo = 0;
+
+
+        feedback.textContent =
+            "❌ Xato. Javob: " +
+            correctAnswer;
+
+
+        feedback.className =
+            "feedback wrong";
+
+    }
+
+
+    updateStats();
+
+    answer.disabled = true;
+
+
+    setTimeout(function(){
+
+        if(
+            !game.classList.contains(
+                "hidden"
+            )
+        ){
+
+            newQuestion();
+
+        }
+
+    },650);
+
+}
+
+
+/* =========================
+   TIME OUT
+========================= */
+
+function timeOut(){
+
+    if(locked){
+
+        return;
+
+    }
+
+
+    locked = true;
+
+    wrong++;
+
+    combo = 0;
+
+
+    feedback.textContent =
+        "⏰ Vaqt tugadi! Javob: " +
+        correctAnswer;
+
+
+    feedback.className =
+        "feedback wrong";
+
+
+    answer.disabled = true;
+
+
+    updateStats();
+
+
+    setTimeout(function(){
+
+        if(
+            !game.classList.contains(
+                "hidden"
+            )
+        ){
+
+            newQuestion();
+
+        }
+
+    },800);
+
+}
+
+
+/* =========================
+   UPDATE STATS
+========================= */
+
+function updateStats(){
+
+    scoreEl.textContent =
+        score;
+
+    correctEl.textContent =
+        correct;
+
+    wrongEl.textContent =
+        wrong;
+
+
+    if(combo >= 3){
+
+        comboEl.textContent =
+            "🔥 " +
+            combo +
+            " ta ketma-ket!";
+
+    }
+
+    else{
+
+        comboEl.textContent =
+            "";
+
+    }
+
+}
+
+
+/* =========================
+   FINISH GAME
+========================= */
+
+function finishGame(){
+
+    clearInterval(timerInterval);
+
+
+    game.classList.add(
+        "hidden"
+    );
+
+    result.classList.remove(
+        "hidden"
+    );
+
+
+    document.getElementById(
+        "finalScore"
+    ).textContent =
+        score;
+
+
+    document.getElementById(
+        "finalCorrect"
+    ).textContent =
+        correct;
+
+
+    document.getElementById(
+        "finalWrong"
+    ).textContent =
+        wrong;
+
+
+    document.getElementById(
+        "finalTotal"
+    ).textContent =
+        correct + wrong;
+
+
+    document.getElementById(
+        "resultLevel"
+    ).textContent =
+        levels[level].name +
+        " daraja";
+
+
+    const oldRecord =
+        getRecord();
+
+
+    if(score > oldRecord){
+
+        localStorage.setItem(
+            "tezHisoblaRecord",
+            score
+        );
+
+    }
+
+
+    updateHomeRecord();
+
+}
+
+
+/* =========================
+   HOME
+========================= */
+
 function goHome(){
-  clearInterval(timerInterval);
-  game.classList.add("hidden");
-  result.classList.add("hidden");
-  home.classList.remove("hidden");
-  updateHomeRecord();
+
+    clearInterval(timerInterval);
+
+    game.classList.add(
+        "hidden"
+    );
+
+    result.classList.add(
+        "hidden"
+    );
+
+    home.classList.remove(
+        "hidden"
+    );
+
+    updateHomeRecord();
+
 }
-// RESTART
+
+
+/* =========================
+   RESTART
+========================= */
+
 function restartGame(){
-  startGame(level);
+
+    startGame(level);
+
 }
-// ENTER
-answer.addEventListener("keydown",function(e){
-  if(e.key === "Enter"){
-    checkAnswer();
-  }
-});
-// RANDOM
+
+
+/* =========================
+   ENTER KEY
+========================= */
+
+answer.addEventListener(
+    "keydown",
+    function(e){
+
+        if(e.key === "Enter"){
+
+            checkAnswer();
+
+        }
+
+    }
+);
+
+
+/* =========================
+   RANDOM NUMBER
+========================= */
+
 function randomInt(min,max){
-  return Math.floor(
-    Math.random() * (max-min+1)
-  ) + min;
+
+    return Math.floor(
+        Math.random() *
+        (max - min + 1)
+    ) + min;
+
 }
+
 </script>
+
 </body>
 </html>
